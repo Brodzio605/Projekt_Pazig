@@ -62,3 +62,36 @@ C:\Users\Ewa\Desktop\BadanieKrwi\BadanieKrwi\obj\Debug\Views\KalendarzBadanOkno.
 C:\Users\Ewa\Desktop\BadanieKrwi\BadanieKrwi\obj\Debug\Views\KlinikiOkno.baml
 C:\Users\Ewa\Desktop\BadanieKrwi\BadanieKrwi\obj\Debug\Views\MenuOkno.baml
 C:\Users\Ewa\Desktop\BadanieKrwi\BadanieKrwi\obj\Debug\Views\RejestracjaOkno.baml
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\bin\Debug\BadanieKrwi.exe.config
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\bin\Debug\BadanieKrwi.exe
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\bin\Debug\BadanieKrwi.pdb
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\BadanieKrwi.csproj.AssemblyReference.cache
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\BadanieKrwi.csproj.SuggestedBindingRedirects.cache
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\BadaniaOkno.g.cs
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\BadaniaEdycjaOkno.g.cs
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\KalendarzBadanOkno.g.cs
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\KlinikiOkno.g.cs
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\MainWindow.g.cs
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\MenuOkno.g.cs
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\NoweBadanieOkno.g.cs
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\RejestracjaOkno.g.cs
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\TwojeBadanieOkno.g.cs
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\App.g.cs
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\BadanieKrwi_MarkupCompile.cache
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\BadanieKrwi_MarkupCompile.lref
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\BadaniaOkno.baml
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\BadaniaEdycjaOkno.baml
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\KalendarzBadanOkno.baml
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\KlinikiOkno.baml
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\MainWindow.baml
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\MenuOkno.baml
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\NoweBadanieOkno.baml
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\RejestracjaOkno.baml
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\Views\TwojeBadanieOkno.baml
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\BadanieKrwi.g.resources
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\BadanieKrwi.Properties.Resources.resources
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\BadanieKrwi.csproj.GenerateResource.cache
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\BadanieKrwi.csproj.CoreCompileInputs.cache
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\BadanieKrwi.exe
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\BadanieKrwi.pdb

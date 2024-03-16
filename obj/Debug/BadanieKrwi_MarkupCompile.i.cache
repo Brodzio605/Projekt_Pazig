@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Ewa\Desktop\BadanieKrwi\BadanieKrwi\obj\Debug\
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\obj\Debug\
 BadanieKrwi
 none
 false
 DEBUG;TRACE
-C:\Users\Ewa\Desktop\BadanieKrwi\BadanieKrwi\App.xaml
+C:\Users\Brodzio\OneDrive - Opolska eSzkola\Pulpit\Projekt_Pazig\App.xaml
 91128755087
 
 25511947979
 13-1310406943
 Views\BadaniaOkno.xaml;Views\BadaniaEdycjaOkno.xaml;Views\KalendarzBadanOkno.xaml;Views\KlinikiOkno.xaml;Views\MainWindow.xaml;Views\MenuOkno.xaml;Views\NoweBadanieOkno.xaml;Views\RejestracjaOkno.xaml;Views\TwojeBadanieOkno.xaml;
 
-False
+True
 
