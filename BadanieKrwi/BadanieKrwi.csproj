@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\DateModel.cs" />
     <Compile Include="Models\KlasaBazowa.cs" />
     <Compile Include="Models\RelayCommand.cs" />
     <Compile Include="ViewModels\BadaniaViewModel.cs" />
