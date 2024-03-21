@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace BadanieKrwi.Models
 {
-    public abstract class KlasaBazowa
+    public abstract class KlasaBazowa: INotifyPropertyChanged
     {
         /// <summary>
         /// Występuje, gdy zmienia się wartość właściwości.

@@ -76,8 +76,7 @@ namespace BadanieKrwi.ViewModels
             if (obj is MenuOkno m)
             {
                 KlinikiOkno klinikiWindow = new KlinikiOkno();
-                klinikiWindow.Show();
-                m.Close();
+                klinikiWindow.ShowDialog();
             }
         }
 

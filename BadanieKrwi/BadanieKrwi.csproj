@@ -57,6 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="Models\DateModel.cs" />
     <Compile Include="Models\KlasaBazowa.cs" />
+    <Compile Include="Models\Klinika.cs" />
     <Compile Include="Models\RelayCommand.cs" />
     <Compile Include="ViewModels\BadaniaViewModel.cs" />
     <Compile Include="ViewModels\BadaniaEdycjaViewModel.cs" />
