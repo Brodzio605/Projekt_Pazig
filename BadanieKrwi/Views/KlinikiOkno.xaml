@@ -1,0 +1,47 @@
+﻿<Window
+    x:Class="BadanieKrwi.Views.KlinikiOkno"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:BadanieKrwi"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Kliniki"
+    Width="800"
+    Height="450"
+    Background="Black"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <StackPanel>
+        <Label
+            Margin="0,20,0,0"
+            HorizontalAlignment="Center"
+            FontSize="50"
+            FontWeight="Bold"
+            Foreground="White">
+            Twoje Kliniki
+        </Label>
+
+
+        <TextBlock
+            Margin="0,20,0,0"
+            FontSize="20"
+            Foreground="White"
+            TextWrapping="Wrap">
+            W tej chwili nie ma żadnych klinik do wyświetlenia.
+        </TextBlock>
+
+        <Button
+            Name="wroc"
+            Grid.Row="20"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="5,40,5,10"
+            Background="LightSkyBlue"
+            Click="WrocMenu"
+            FontSize="30">
+            Wróć
+        </Button>
+
+    </StackPanel>
+</Window>
