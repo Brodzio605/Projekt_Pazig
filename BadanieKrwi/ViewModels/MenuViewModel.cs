@@ -49,15 +49,7 @@ namespace BadanieKrwi.ViewModels
             if(obj is MenuOkno m)
             {
                 NoweBadanieOkno badanieWindow = new NoweBadanieOkno();
-                badanieWindow.Closing += ((sender, args) =>
-                {
-                    m.ShowInTaskbar = true;
-                    m.WindowState = System.Windows.WindowState.Normal;
-                });
-                
-                m.WindowState = System.Windows.WindowState.Minimized;
-                m.ShowInTaskbar = false;
-                badanieWindow.Show();
+                badanieWindow.ShowDialog();
             }
         }
 
@@ -66,8 +58,7 @@ namespace BadanieKrwi.ViewModels
             if (obj is MenuOkno m)
             {
                 TwojeBadanieOkno badanieWindow = new TwojeBadanieOkno();
-                badanieWindow.Show();
-                m.Close();
+                badanieWindow.ShowDialog();
             }
         }
 
@@ -76,8 +67,7 @@ namespace BadanieKrwi.ViewModels
             if (obj is MenuOkno m)
             {
                 KalendarzBadanOkno kalendarz = new KalendarzBadanOkno();
-                kalendarz.Show();
-                m.Close();
+                kalendarz.ShowDialog();
             }
         }
 

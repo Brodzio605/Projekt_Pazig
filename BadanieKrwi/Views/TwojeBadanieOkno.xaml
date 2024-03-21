@@ -6,6 +6,7 @@
     xmlns:local="clr-namespace:BadanieKrwi"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:BadanieKrwi.ViewModels"
+    x:Name="TwojeBadaneOkno"
     Title="Twoje_Badanie_Okno"
     Width="800"
     Height="800"
@@ -55,6 +56,7 @@
                 Margin="3"
                 Background="LightSkyBlue"
                 Command="{Binding SzczegolyCommand}"
+                CommandParameter="{Binding ElementName=TwojeBadaneOkno}"
                 Content="Szczegóły"
                 FontSize="30" />
 
@@ -63,6 +65,7 @@
                 Margin="3"
                 Background="LightSkyBlue"
                 Command="{Binding WrocCommand}"
+                CommandParameter="{Binding ElementName=TwojeBadaneOkno}"
                 Content="Wróć"
                 FontSize="30" />
         </StackPanel>

@@ -76,30 +76,15 @@ namespace BadanieKrwi.ViewModels
         private void ExecWrocCommand(object obj)
         {
             if (obj is TwojeBadanieOkno tbo)
-            {
-               // dorobic nastepnym razem ;) 
-            }
+                tbo.Close();
         }
 
         private void ExecSzczegolyCommand(object obj)
         {
-            
+            if (obj is TwojeBadanieOkno tbo)
+                tbo.Close();
         }
         #endregion Methods
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }

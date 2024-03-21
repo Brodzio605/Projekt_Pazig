@@ -49,6 +49,7 @@
             Margin="10,10,10,10"
             Background="LightSkyBlue"
             Command="{Binding TwojeBadaniaCommand}"
+            CommandParameter="{Binding ElementName=menu}"
             Content="Twoje Badania"
             FontSize="30" />
 
@@ -58,6 +59,7 @@
             Margin="10,10,10,10"
             Background="LightSkyBlue"
             Command="{Binding KalendarzBadanCommand}"
+            CommandParameter="{Binding ElementName=menu}"
             Content="Kalendarz Badan"
             FontSize="30" />
 
