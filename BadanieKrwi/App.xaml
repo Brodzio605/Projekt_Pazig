@@ -15,5 +15,10 @@
             <Setter Property="Margin" Value="3" />
         </Style>
 
+        <Style TargetType="TextBox">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="3" />
+        </Style>
+
     </Application.Resources>
 </Application>

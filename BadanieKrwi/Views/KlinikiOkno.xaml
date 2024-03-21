@@ -5,40 +5,150 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:BadanieKrwi"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:BadanieKrwi.ViewModels"
+    Name="Kliniki"
     Title="Kliniki"
     Width="800"
-    Height="450"
+    Height="550"
     Background="Black"
     ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
-    <StackPanel>
+    <Window.DataContext>
+        <vm:KlinikiViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="210" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
         <Label
-            Margin="0,20,0,0"
+            Grid.ColumnSpan="2"
             HorizontalAlignment="Center"
             Content="Twoje Kliniki"
             FontSize="50"
             FontWeight="Bold"
             Foreground="White" />
+        <Label
+            Grid.Row="1"
+            Content="Wybór Kliniki"
+            FontSize="25"
+            Foreground="White" />
 
+        <ComboBox
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="3"
+            VerticalAlignment="Center"
+            DisplayMemberPath="NazwaITelefon"
+            FontSize="25"
+            ItemsSource="{Binding Kliniki}"
+            SelectedItem="{Binding WybranaKlinika}" />
 
-        <TextBlock
-            Margin="0,20,0,0"
-            FontSize="20"
-            Foreground="White"
-            Text="W tej chwili nie ma żadnych klinik do wyświetlenia."
-            TextWrapping="Wrap" />
+        <GroupBox Grid.Row="2" Grid.ColumnSpan="2">
+            <GroupBox.Header>
+                <Label
+                    Content="Szczegóły"
+                    FontSize="25"
+                    FontWeight="Bold"
+                    Foreground="White" />
+            </GroupBox.Header>
 
-        <Button
-            Name="wroc"
-            Grid.Row="20"
-            Grid.Column="0"
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Content="Nazwa:"
+                    FontSize="25"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Column="1"
+                    FontSize="25"
+                    Text="{Binding NowaKlinika.Nazwa, UpdateSourceTrigger=PropertyChanged}" />
+                <Label
+                    Grid.Row="1"
+                    Content="Adres:"
+                    FontSize="25"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    FontSize="25"
+                    Text="{Binding NowaKlinika.Adres, UpdateSourceTrigger=PropertyChanged}" />
+
+                <Label
+                    Grid.Row="2"
+                    Content="Numer telefonu:"
+                    FontSize="25"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="2"
+                    Grid.Column=" 1"
+                    FontSize="25"
+                    Text="{Binding NowaKlinika.Telefon, UpdateSourceTrigger=PropertyChanged}" />
+
+                <Label
+                    Grid.Row="3"
+                    VerticalAlignment="Top"
+                    Content="Informacja:"
+                    FontSize="25"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    VerticalAlignment="Stretch"
+                    AcceptsReturn="True"
+                    AcceptsTab="True"
+                    FontSize="25"
+                    Text="{Binding NowaKlinika.Informacja, UpdateSourceTrigger=PropertyChanged}" />
+
+            </Grid>
+        </GroupBox>
+
+        <StackPanel
+            Grid.Row="3"
             Grid.ColumnSpan="2"
-            Margin="5,40,5,10"
-            Background="LightSkyBlue"
-            Click="WrocMenu"
-            Content="Wróć"
-            FontSize="30" />
-
-    </StackPanel>
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <Button
+                Width="200"
+                Margin="3"
+                Background="LightSkyBlue"
+                Command="{Binding WrocCommand}"
+                CommandParameter="{Binding ElementName=Kliniki}"
+                Content="Wróć"
+                FontSize="30" />
+            <Button
+                Width="200"
+                Margin="3"
+                Background="LightSkyBlue"
+                Command="{Binding ZapiszCommand}"
+                CommandParameter="{Binding ElementName=Kliniki}"
+                Content="Zapisz"
+                FontSize="30" />
+            <Button
+                Width="200"
+                Margin="3"
+                Background="LightSkyBlue"
+                Command="{Binding NowyCommand}"
+                Content="Nowy"
+                FontSize="30" />
+        </StackPanel>
+    </Grid>
 </Window>

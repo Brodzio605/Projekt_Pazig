@@ -69,6 +69,7 @@
             Margin="10,10,10,10"
             Background="LightSkyBlue"
             Command="{Binding KlinikiCommand}"
+            CommandParameter="{Binding ElementName=menu}"
             Content="Kliniki"
             FontSize="30" />
 
@@ -78,6 +79,7 @@
             Margin="10,10,10,10"
             Background="LightSkyBlue"
             Command="{Binding StatystykiCommand}"
+            CommandParameter="{Binding ElementName=menu}"
             Content="Statystyki"
             FontSize="30" />
 
@@ -87,6 +89,7 @@
             Margin="10,10,10,10"
             Background="LightSkyBlue"
             Command="{Binding InformacjeCommand}"
+            CommandParameter="{Binding ElementName=menu}"
             Content="Informacje"
             FontSize="30" />
     </Grid>
