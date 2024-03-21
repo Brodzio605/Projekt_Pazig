@@ -16,20 +16,18 @@
         <Label
             Margin="0,20,0,0"
             HorizontalAlignment="Center"
+            Content="Twoje Kliniki"
             FontSize="50"
             FontWeight="Bold"
-            Foreground="White">
-            Twoje Kliniki
-        </Label>
+            Foreground="White" />
 
 
         <TextBlock
             Margin="0,20,0,0"
             FontSize="20"
             Foreground="White"
-            TextWrapping="Wrap">
-            W tej chwili nie ma żadnych klinik do wyświetlenia.
-        </TextBlock>
+            Text="W tej chwili nie ma żadnych klinik do wyświetlenia."
+            TextWrapping="Wrap" />
 
         <Button
             Name="wroc"
@@ -39,9 +37,8 @@
             Margin="5,40,5,10"
             Background="LightSkyBlue"
             Click="WrocMenu"
-            FontSize="30">
-            Wróć
-        </Button>
+            Content="Wróć"
+            FontSize="30" />
 
     </StackPanel>
 </Window>

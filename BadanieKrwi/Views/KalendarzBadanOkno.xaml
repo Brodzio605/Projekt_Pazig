@@ -5,6 +5,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:BadanieKrwi"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:BadanieKrwi.ViewModels"
+    Name="Kalendarz"
     Title="KalendarzBadan"
     Width="500"
     Height="400"
@@ -12,13 +14,24 @@
     ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
+    <Window.DataContext>
+        <vm:KalendarzBadaniaViewModel />
+    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
         <Label
+            Grid.ColumnSpan="2"
             Margin="3"
             HorizontalAlignment="Center"
             Content="Kalendarz Badań"
@@ -26,17 +39,98 @@
             FontWeight="Bold"
             Foreground="White" />
 
-        <Viewbox Grid.Row="1" Stretch="Uniform">
-            <Calendar />
-        </Viewbox>
+        <Label
+            Grid.Row="1"
+            Content="Wybór daty"
+            Foreground="White" />
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="2"
+            Orientation="Horizontal">
+            <DatePicker
+                Margin="3"
+                VerticalAlignment="Center"
+                SelectedDate="{Binding DataBadania.Data}" />
+            <ComboBox
+                Width="60"
+                Margin="3"
+                VerticalAlignment="Center"
+                ItemsSource="{Binding DataBadania.Godziny}"
+                SelectedItem="{Binding DataBadania.Godzina}" />
+            <ComboBox
+                Width="60"
+                Margin="3"
+                VerticalAlignment="Center"
+                ItemsSource="{Binding DataBadania.Minuty}"
+                SelectedItem="{Binding DataBadania.Minuta}" />
+        </StackPanel>
 
-        <Button
+        <Label
             Grid.Row="2"
-            Width="200"
-            Margin="3"
+            Content="Wybór Kliniki"
+            Foreground="White" />
+        <Grid Grid.Row="2" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ComboBox
+                Grid.Column="1"
+                Margin="3"
+                VerticalAlignment="Center"
+                ItemsSource="{Binding Kliniki}"
+                SelectedItem="{Binding WybranaKlinika}" />
+        </Grid>
+
+        <Grid Grid.Row="3" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Content="Treść" Foreground="White" />
+            <TextBox
+                Grid.Row="1"
+                Margin="3"
+                AcceptsReturn="True"
+                AcceptsTab="True"
+                Text="{Binding Tresc, UpdateSourceTrigger=PropertyChanged}"
+                TextWrapping="Wrap"
+                VerticalScrollBarVisibility="Auto" />
+        </Grid>
+
+        <StackPanel
+            Grid.Row="4"
+            Grid.ColumnSpan="3"
             HorizontalAlignment="Center"
-            Background="LightSkyBlue"
-            Content="Wróć"
-            FontSize="15" />
+            Orientation="Horizontal">
+            <Button
+                Width="100"
+                Margin="3"
+                HorizontalAlignment="Center"
+                Background="LightSkyBlue"
+                Command="{Binding ZapiszCommand}"
+                CommandParameter="{Binding ElementName=Kalendarz}"
+                Content="Zapisz"
+                FontSize="15" />
+            <Button
+                Width="100"
+                Margin="3"
+                HorizontalAlignment="Center"
+                Background="LightSkyBlue"
+                Command="{Binding WyslijCommand}"
+                CommandParameter="{Binding ElementName=Kalendarz}"
+                Content="Wyślij"
+                FontSize="15" />
+            <Button
+                Width="100"
+                Margin="3"
+                HorizontalAlignment="Center"
+                Background="LightSkyBlue"
+                Command="{Binding WrocCommand}"
+                CommandParameter="{Binding ElementName=Kalendarz}"
+                Content="Wróć"
+                FontSize="15" />
+        </StackPanel>
     </Grid>
 </Window>
