@@ -67,6 +67,7 @@
     <Compile Include="ViewModels\MenuViewModel.cs" />
     <Compile Include="ViewModels\NoweBadaniaViewModel.cs" />
     <Compile Include="ViewModels\RejestracjaViewModel.cs" />
+    <Compile Include="ViewModels\StatystykiViewModel.cs" />
     <Compile Include="ViewModels\TwojeBadanieViewModel.cs" />
     <Compile Include="Views\BadaniaOkno.xaml.cs">
       <DependentUpon>BadaniaOkno.xaml</DependentUpon>
@@ -88,6 +89,9 @@
     </Compile>
     <Compile Include="Views\RejestracjaOkno.xaml.cs">
       <DependentUpon>RejestracjaOkno.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StatystykiOkno.xaml.cs">
+      <DependentUpon>StatystykiOkno.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TwojeBadanieOkno.xaml.cs">
       <DependentUpon>TwojeBadanieOkno.xaml</DependentUpon>
@@ -129,6 +133,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\RejestracjaOkno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StatystykiOkno.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

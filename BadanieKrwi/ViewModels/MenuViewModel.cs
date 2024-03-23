@@ -84,9 +84,8 @@ namespace BadanieKrwi.ViewModels
         {
             if (obj is MenuOkno m)
             {
-                //Statystyki statystyki = new Kliniki();
-                //statystyki.Show();
-                m.Close();
+                StatystykiOkno statystyki = new StatystykiOkno();
+                statystyki.ShowDialog();
             }
         }
 

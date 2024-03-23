@@ -1,0 +1,114 @@
+﻿<Window
+    x:Class="BadanieKrwi.Views.StatystykiOkno"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:BadanieKrwi.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:BadanieKrwi.ViewModels"
+    x:Name="Statystyki"
+    Title="Statystyki"
+    Width="258"
+    Height="389"
+    Background="Black"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <vm:StatystykiViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            Content="Statystyki"
+            FontSize="20"
+            Foreground="White" />
+        <TextBox
+            Grid.Row="1"
+            Grid.Column="2"
+            Width="50"
+            HorizontalAlignment="Left"
+            IsReadOnly="True"
+            Text="{Binding TwojaIloscBadan}" />
+
+        <Label
+            Grid.Row="1"
+            Content="Twoja ilość badań"
+            Foreground="White" />
+        <TextBox
+            Grid.Row="2"
+            Grid.Column="2"
+            Width="50"
+            HorizontalAlignment="Left"
+            IsReadOnly="True"
+            Text="{Binding BadanieWTymRoku}" />
+        <Label
+            Grid.Row="2"
+            Content="Badanie w tym roku"
+            Foreground="White" />
+        <TextBox
+            Grid.Row="3"
+            Grid.Column="2"
+            Width="50"
+            HorizontalAlignment="Left"
+            IsReadOnly="True"
+            Text="{Binding SredniCzas}" />
+        <Label
+            Grid.Row="3"
+            Content="Sredni czas pomiędzy badaniami"
+            Foreground="White" />
+        <Label
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            Content="Stężenie substancji"
+            FontSize="20"
+            Foreground="White" />
+        <Label
+            Grid.Row="5"
+            Content="Liczba erytrocytów"
+            Foreground="White" />
+        <TextBox
+            Grid.Row="5"
+            Grid.Column="2"
+            Width="50"
+            HorizontalAlignment="Left"
+            IsReadOnly="True"
+            Text="{Binding LiczbaErytrocytow}" />
+        <Label
+            Grid.Row="6"
+            Content="Hemoglobina"
+            Foreground="White" />
+        <TextBox
+            Grid.Row="6"
+            Grid.Column="2"
+            Width="50"
+            HorizontalAlignment="Left"
+            IsReadOnly="True"
+            Text="{Binding Hemoglobina}" />
+        <Button
+            Grid.Row="7"
+            Grid.ColumnSpan="2"
+            Width="100"
+            VerticalAlignment="Center"
+            Command="{Binding WrocCommand}"
+            CommandParameter="{Binding ElementName=Statystyki}"
+            Content="Wróć" />
+
+    </Grid>
+</Window>
