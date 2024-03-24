@@ -20,5 +20,11 @@
             <Setter Property="Margin" Value="3" />
         </Style>
 
+        <Style TargetType="Button">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="3" />
+            <Setter Property="MinWidth" Value="100" />
+        </Style>
+
     </Application.Resources>
 </Application>

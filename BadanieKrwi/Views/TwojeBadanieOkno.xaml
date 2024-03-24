@@ -8,8 +8,8 @@
     xmlns:vm="clr-namespace:BadanieKrwi.ViewModels"
     x:Name="TwojeBadaneOkno"
     Title="Twoje_Badanie_Okno"
-    Width="800"
-    Height="800"
+    Width="822"
+    Height="508"
     Background="Black"
     ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
@@ -28,21 +28,35 @@
             Margin="0,20,0,0"
             HorizontalAlignment="Center"
             Content="Twoje Badania"
-            FontSize="50"
+            FontSize="30"
             FontWeight="Bold"
             Foreground="White" />
 
         <DataGrid
             Grid.Row="1"
             Margin="3"
-            FontSize="30"
+            AutoGenerateColumns="False"
+            CanUserAddRows="False"
+            CanUserDeleteRows="False"
+            FontSize="20"
             IsReadOnly="True"
             ItemsSource="{Binding Badania}"
             SelectedItem="{Binding WybraneBadanie}"
             SelectionMode="Single"
             SelectionUnit="FullRow">
             <DataGrid.Columns>
-                <DataGridTextColumn Width="*" Header="Data" />
+                <DataGridTextColumn
+                    Width="300"
+                    Binding="{Binding NazwaBadania}"
+                    Header="Nazwa" />
+                <DataGridTextColumn
+                    Width="200"
+                    Binding="{Binding DataBadania, StringFormat='dd.MM.yyyy HH:mm'}"
+                    Header="Data Badania" />
+                <DataGridTextColumn
+                    Width="*"
+                    Binding="{Binding NazwaKliniki}"
+                    Header="Nazwa Kliniki" />
             </DataGrid.Columns>
         </DataGrid>
 
@@ -58,7 +72,7 @@
                 Command="{Binding SzczegolyCommand}"
                 CommandParameter="{Binding ElementName=TwojeBadaneOkno}"
                 Content="Szczegóły"
-                FontSize="30" />
+                FontSize="20" />
 
             <Button
                 Width="200"
@@ -67,7 +81,7 @@
                 Command="{Binding WrocCommand}"
                 CommandParameter="{Binding ElementName=TwojeBadaneOkno}"
                 Content="Wróć"
-                FontSize="30" />
+                FontSize="20" />
         </StackPanel>
     </Grid>
 </Window>

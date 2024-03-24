@@ -236,7 +236,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                SelectedDate="{Binding DataBadania, UpdateSourceTrigger=PropertyChanged}" />
+                SelectedDate="{Binding NoweBadanie.DataBadania, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Grid.Row="2"
@@ -245,7 +245,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                Text="{Binding NazwaKliniki, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding NoweBadanie.NazwaKliniki, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Grid.Row="4"
@@ -254,7 +254,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                Text="{Binding StezenieErytrocytowRbc, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding NoweBadanie.StezenieErytrocytowRbc, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Grid.Row="5"
@@ -263,7 +263,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                Text="{Binding HemoglobinaHb, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding NoweBadanie.HemoglobinaHb, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Grid.Row="6"
@@ -272,7 +272,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                Text="{Binding HematokrytHtc, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding NoweBadanie.HematokrytHtc, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Grid.Row="7"
@@ -281,7 +281,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                Text="{Binding SredniaObjetoscErytrocytuMcv, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding NoweBadanie.SredniaObjetoscErytrocytuMcv, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Grid.Row="8"
@@ -290,7 +290,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                Text="{Binding SredniaMasaHemoglobinyWErytrocycieMch, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding NoweBadanie.SredniaMasaHemoglobinyWErytrocycieMch, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Grid.Row="9"
@@ -299,7 +299,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                Text="{Binding SrednieStezenieHemoglobinyWErytrocytachMchc, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding NoweBadanie.SrednieStezenieHemoglobinyWErytrocytachMchc, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Grid.Row="10"
@@ -308,7 +308,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                Text="{Binding RozpietoscRozkladuObjetosciErytrocytowRdwCw, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding NoweBadanie.RozpietoscRozkladuObjetosciErytrocytowRdwCw, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Grid.Row="11"
@@ -317,7 +317,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                Text="{Binding RetikulocytyRc, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding NoweBadanie.RetikulocytyRc, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Grid.Row="12"
@@ -326,7 +326,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                Text="{Binding StezenieLeukocytowWbc, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding NoweBadanie.StezenieLeukocytowWbc, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Grid.Row="13"
@@ -335,7 +335,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                Text="{Binding Neutrofile, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding NoweBadanie.Neutrofile, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Grid.Row="14"
@@ -344,7 +344,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                Text="{Binding Bazofile, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding NoweBadanie.Bazofile, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Grid.Row="15"
@@ -353,7 +353,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                Text="{Binding Eozynofile, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding NoweBadanie.Eozynofile, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Grid.Row="16"
@@ -362,7 +362,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                Text="{Binding Limfocyty, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding NoweBadanie.Limfocyty, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Grid.Row="17"
@@ -371,7 +371,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                Text="{Binding Monocyty, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding NoweBadanie.Monocyty, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Grid.Row="18"
@@ -380,7 +380,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                Text="{Binding PlytkiKrwiPlt, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding NoweBadanie.PlytkiKrwiPlt, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBox
                 Grid.Row="19"
@@ -389,7 +389,7 @@
                 Background="LightSkyBlue"
                 FontSize="25"
                 Foreground="Black"
-                Text="{Binding SredniaObjetoscKrwiMpv, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding NoweBadanie.SredniaObjetoscKrwiMpv, UpdateSourceTrigger=PropertyChanged}" />
 
             <Button
                 Grid.Row="20"

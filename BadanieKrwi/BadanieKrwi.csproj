@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -55,12 +61,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\BadanieModel.cs" />
+    <Compile Include="Models\ButtonModel.cs" />
     <Compile Include="Models\DateModel.cs" />
     <Compile Include="Models\KlasaBazowa.cs" />
     <Compile Include="Models\Klinika.cs" />
     <Compile Include="Models\RelayCommand.cs" />
-    <Compile Include="ViewModels\BadaniaViewModel.cs" />
-    <Compile Include="ViewModels\BadaniaEdycjaViewModel.cs" />
+    <Compile Include="ViewModels\BadanieViewModel.cs" />
     <Compile Include="ViewModels\KalendarzBadaniaViewModel.cs" />
     <Compile Include="ViewModels\KlinikiViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
@@ -68,12 +75,10 @@
     <Compile Include="ViewModels\NoweBadaniaViewModel.cs" />
     <Compile Include="ViewModels\RejestracjaViewModel.cs" />
     <Compile Include="ViewModels\StatystykiViewModel.cs" />
+    <Compile Include="ViewModels\SzczegolyStezeniaSubstancjiViewModel.cs" />
     <Compile Include="ViewModels\TwojeBadanieViewModel.cs" />
-    <Compile Include="Views\BadaniaOkno.xaml.cs">
-      <DependentUpon>BadaniaOkno.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\BadaniaEdycjaOkno.xaml.cs">
-      <DependentUpon>BadaniaEdycjaOkno.xaml</DependentUpon>
+    <Compile Include="Views\BadanieOkno.xaml.cs">
+      <DependentUpon>BadanieOkno.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\KalendarzBadanOkno.xaml.cs">
       <DependentUpon>KalendarzBadanOkno.xaml</DependentUpon>
@@ -93,14 +98,13 @@
     <Compile Include="Views\StatystykiOkno.xaml.cs">
       <DependentUpon>StatystykiOkno.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\SzczegolyStezeniaSubstancjiOkno.xaml.cs">
+      <DependentUpon>SzczegolyStezeniaSubstancjiOkno.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\TwojeBadanieOkno.xaml.cs">
       <DependentUpon>TwojeBadanieOkno.xaml</DependentUpon>
     </Compile>
-    <Page Include="Views\BadaniaOkno.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\BadaniaEdycjaOkno.xaml">
+    <Page Include="Views\BadanieOkno.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -140,6 +144,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\SzczegolyStezeniaSubstancjiOkno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\TwojeBadanieOkno.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -163,6 +171,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -3,11 +3,11 @@
 namespace BadanieKrwi.Views
 {
     /// <summary>
-    /// Interaction logic for BadaniaOkno.xaml
+    /// Interaction logic for BadanieOkno.xaml
     /// </summary>
-    public partial class BadaniaOkno : Window
+    public partial class BadanieOkno : Window
     {
-        public BadaniaOkno()
+        public BadanieOkno()
         {
             InitializeComponent();
         }

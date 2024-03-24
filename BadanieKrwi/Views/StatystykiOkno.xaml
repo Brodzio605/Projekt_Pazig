@@ -8,7 +8,7 @@
     xmlns:vm="clr-namespace:BadanieKrwi.ViewModels"
     x:Name="Statystyki"
     Title="Statystyki"
-    Width="258"
+    Width="282"
     Height="389"
     Background="Black"
     ResizeMode="NoResize"
@@ -23,14 +23,13 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Label
             Grid.ColumnSpan="2"
@@ -79,30 +78,24 @@
             Content="Stężenie substancji"
             FontSize="20"
             Foreground="White" />
-        <Label
-            Grid.Row="5"
-            Content="Liczba erytrocytów"
-            Foreground="White" />
-        <TextBox
-            Grid.Row="5"
-            Grid.Column="2"
-            Width="50"
-            HorizontalAlignment="Left"
-            IsReadOnly="True"
-            Text="{Binding LiczbaErytrocytow}" />
-        <Label
-            Grid.Row="6"
-            Content="Hemoglobina"
-            Foreground="White" />
-        <TextBox
-            Grid.Row="6"
-            Grid.Column="2"
-            Width="50"
-            HorizontalAlignment="Left"
-            IsReadOnly="True"
-            Text="{Binding Hemoglobina}" />
+
+        <ScrollViewer Grid.Row="5" Grid.ColumnSpan="2">
+            <ItemsControl ItemsSource="{Binding PrzyciskiStezeniaSubstrancji}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button
+                            Margin="3"
+                            Command="{Binding Command}"
+                            CommandParameter="{Binding CommandParameter}">
+                            <TextBlock Text="{Binding Content}" TextWrapping="Wrap" />
+                        </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
         <Button
-            Grid.Row="7"
+            Grid.Row="6"
             Grid.ColumnSpan="2"
             Width="100"
             VerticalAlignment="Center"
