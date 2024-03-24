@@ -111,21 +111,29 @@ namespace BadanieKrwi.ViewModels
         {
             if (obj is NoweBadanieOkno nbo)
             {
-                MessageBoxResult result = MessageBox.Show("Czy na pewno chcesz cofnąć? Twoje dane nie zostaną zapisane", "Powrót", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                if (NoweBadanie.CzyZmodyfikowano)
+                {
+                    MessageBoxResult result = MessageBox.Show("Czy na pewno chcesz cofnąć? Twoje dane nie zostaną zapisane", "Powrót", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                    if (result == MessageBoxResult.No)
+                        return;
+                }
 
-                if (result == MessageBoxResult.Yes)
-                    nbo.Close();
+                nbo.DialogResult = false;
             }
-
         }
 
         private void ExecZapisz(object obj)
         {
             if (obj is NoweBadanieOkno nbo)
             {
-                MessageBoxResult result = MessageBox.Show("Twoje dane zostały zapisane", "Powrót", MessageBoxButton.OK, MessageBoxImage.Information);
-                if (result == MessageBoxResult.OK)
-                    nbo.Close();
+                if (NoweBadanie.CzyZmodyfikowano)
+                {
+                    MessageBoxResult result = MessageBox.Show("Twoje dane zostały zapisane", "Powrót", MessageBoxButton.OK, MessageBoxImage.Information);
+                    if (result == MessageBoxResult.OK)
+                        nbo.DialogResult = true;
+                }
+                else
+                    nbo.DialogResult = true;
             }
         }
         #endregion Methods

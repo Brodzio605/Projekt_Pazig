@@ -5,6 +5,7 @@ namespace BadanieKrwi.Models
     public class BadanieModel : KlasaBazowa
     {
         #region Properties
+        public bool CzyZmodyfikowano { get; set; }
 
         private Guid _id;
         public Guid Id
@@ -29,6 +30,7 @@ namespace BadanieKrwi.Models
                 if (_nazwaBadania != value)
                 {
                     _nazwaBadania = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -43,6 +45,7 @@ namespace BadanieKrwi.Models
                 if (_dataBadania != value)
                 {
                     _dataBadania = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -57,6 +60,7 @@ namespace BadanieKrwi.Models
                 if (_nazwaKliniki != value)
                 {
                     _nazwaKliniki = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -71,6 +75,7 @@ namespace BadanieKrwi.Models
                 if (_stezenieErytrocytowRbc != value)
                 {
                     _stezenieErytrocytowRbc = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -85,6 +90,7 @@ namespace BadanieKrwi.Models
                 if (_hemoglobinaHb != value)
                 {
                     _hemoglobinaHb = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -99,6 +105,7 @@ namespace BadanieKrwi.Models
                 if (_hematokrytHtc != value)
                 {
                     _hematokrytHtc = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -113,6 +120,7 @@ namespace BadanieKrwi.Models
                 if (_sredniaObjetoscErytrocytuMcv != value)
                 {
                     _sredniaObjetoscErytrocytuMcv = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -127,6 +135,7 @@ namespace BadanieKrwi.Models
                 if (_sredniaMasaHemoglobinyWErytrocycieMch != value)
                 {
                     _sredniaMasaHemoglobinyWErytrocycieMch = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -141,6 +150,7 @@ namespace BadanieKrwi.Models
                 if (_srednieStezenieHemoglobinyWErytrocytachMchc != value)
                 {
                     _srednieStezenieHemoglobinyWErytrocytachMchc = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -155,6 +165,7 @@ namespace BadanieKrwi.Models
                 if (_rozpietoscRozkladuObjetosciErytrocytowRdwCw != value)
                 {
                     _rozpietoscRozkladuObjetosciErytrocytowRdwCw = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -169,6 +180,7 @@ namespace BadanieKrwi.Models
                 if (_retikulocytyRc != value)
                 {
                     _retikulocytyRc = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -183,6 +195,7 @@ namespace BadanieKrwi.Models
                 if (_stezenieLeukocytowWbc != value)
                 {
                     _stezenieLeukocytowWbc = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -197,6 +210,7 @@ namespace BadanieKrwi.Models
                 if (_neutrofile != value)
                 {
                     _neutrofile = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -211,6 +225,7 @@ namespace BadanieKrwi.Models
                 if (_bazofile != value)
                 {
                     _bazofile = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -225,6 +240,7 @@ namespace BadanieKrwi.Models
                 if (_eozynofile != value)
                 {
                     _eozynofile = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -239,6 +255,7 @@ namespace BadanieKrwi.Models
                 if (_limfocyty != value)
                 {
                     _limfocyty = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -253,6 +270,7 @@ namespace BadanieKrwi.Models
                 if (_monocyty != value)
                 {
                     _monocyty = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -267,6 +285,7 @@ namespace BadanieKrwi.Models
                 if (_plytkiKrwiPlt != value)
                 {
                     _plytkiKrwiPlt = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -281,6 +300,7 @@ namespace BadanieKrwi.Models
                 if (_sredniaObjetoscKrwiMpv != value)
                 {
                     _sredniaObjetoscKrwiMpv = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -296,6 +316,7 @@ namespace BadanieKrwi.Models
                 if (_zelazo != value)
                 {
                     _zelazo = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -310,6 +331,7 @@ namespace BadanieKrwi.Models
                 if (_magnez != value)
                 {
                     _magnez = value;
+                    CzyZmodyfikowano = true;
                     OnPropertyChanged();
                 }
             }
@@ -321,6 +343,7 @@ namespace BadanieKrwi.Models
         {
             Id = Guid.NewGuid();
             DataBadania = DateTime.Now;
+            CzyZmodyfikowano = false;
         }
 
         public BadanieModel(BadanieModel badanie)

@@ -49,7 +49,11 @@ namespace BadanieKrwi.ViewModels
             if(obj is MenuOkno m)
             {
                 NoweBadanieOkno badanieWindow = new NoweBadanieOkno();
-                badanieWindow.ShowDialog();
+                (badanieWindow.DataContext as NoweBadaniaViewModel).NoweBadanie.CzyZmodyfikowano = false;
+                if (badanieWindow.ShowDialog().Value)
+                {
+
+                }
             }
         }
 

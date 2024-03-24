@@ -38,6 +38,7 @@ namespace BadanieKrwi.ViewModels
             InicjalizacjaKomend();
             InicjalizacjaPrzyciskowStezeniaSubstancji();
         }
+
         private void InicjalizacjaPrzyciskowStezeniaSubstancji()
         {
             PrzyciskiStezeniaSubstrancji = new List<ButtonModel>()

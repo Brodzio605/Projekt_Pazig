@@ -7,413 +7,366 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:BadanieKrwi.ViewModels"
     x:Name="noweBadanie"
-    Title="Nowe_Badaie_Okno"
-    Width="850"
-    Height="1500"
+    Title="Nowe Badanie"
+    Width="685"
+    Height="658"
     Background="Black"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
     <Window.DataContext>
         <vm:NoweBadaniaViewModel />
     </Window.DataContext>
-    <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.4*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.4*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="0.3*" />
-                <RowDefinition Height="0.3*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="4.5*" />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
-            <Label
-                Grid.Row="0"
-                Grid.ColumnSpan="2"
-                Margin="0,20,0,0"
-                HorizontalAlignment="Center"
-                Content="Stwórz nowe badanie"
-                FontSize="50"
-                FontWeight="Bold"
-                Foreground="White" />
+        <Label
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            Content="Stwórz nowe badanie"
+            FontSize="30"
+            FontWeight="Bold"
+            Foreground="White" />
 
-            <Label
-                Grid.Row="1"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Data badania"
-                FontSize="25"
-                Foreground="White" />
+        <Label
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            Content="Data badania"
+            FontSize="15"
+            Foreground="White" />
+        <DatePicker
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="3"
+            VerticalAlignment="Center"
+            FontSize="15"
+            SelectedDate="{Binding NoweBadanie.DataBadania}" />
 
-            <Label
-                Grid.Row="2"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Nazwa Kliniki"
-                FontSize="25"
-                Foreground="White" />
+        <Label
+            Grid.Row="2"
+            VerticalAlignment="Center"
+            Content="Nazwa Badania"
+            FontSize="15"
+            Foreground="White" />
+        <TextBox
+            Grid.Row="2"
+            Grid.Column="2"
+            FontSize="15"
+            Text="{Binding NoweBadanie.NazwaBadania, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Label
-                Grid.Row="3"
-                Grid.ColumnSpan="2"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Content="Morfologia Krwi"
-                FontSize="40"
-                FontWeight="Bold"
-                Foreground="White" />
+        <Label
+            Grid.Row="3"
+            VerticalAlignment="Center"
+            Content="Nazwa Kliniki"
+            FontSize="15"
+            Foreground="White" />
+        <TextBox
+            Grid.Row="3"
+            Grid.Column="2"
+            FontSize="15"
+            Text="{Binding NoweBadanie.NazwaKliniki, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Label
-                Grid.Row="4"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Stężenie Erytrocytów RBC [liczba/μl]"
-                FontSize="25"
-                Foreground="White" />
+        <Label
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Content="Morfologia Krwi"
+            FontSize="30"
+            FontWeight="Bold"
+            Foreground="White" />
 
-            <Label
-                Grid.Row="5"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Hemoglobina Hb [g/dl]"
-                FontSize="25"
-                Foreground="White" />
+        <ScrollViewer Grid.Row="5" Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    VerticalAlignment="Center"
+                    Content="Stężenie Erytrocytów RBC [liczba/μl]"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.StezenieErytrocytowRbc, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Label
-                Grid.Row="6"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Hematokryt Htc [%]"
-                FontSize="25"
-                Foreground="White" />
+                <Label
+                    Grid.Row="1"
+                    VerticalAlignment="Center"
+                    Content="Hemoglobina Hb [g/dl]"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.HemoglobinaHb, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Label
-                Grid.Row="7"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Średnia objętość erytrocytu MCV [fl]"
-                FontSize="25"
-                Foreground="White" />
+                <Label
+                    Grid.Row="2"
+                    VerticalAlignment="Center"
+                    Content="Hematokryt Htc [%]"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.HematokrytHtc, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Label
-                Grid.Row="8"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Średnia masa hemoglobiny w erytrocycie MCH [pg]"
-                FontSize="25"
-                Foreground="White" />
+                <Label
+                    Grid.Row="3"
+                    VerticalAlignment="Center"
+                    Content="Średnia objętość erytrocytu MCV [fl]"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.SredniaObjetoscErytrocytuMcv, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Label
-                Grid.Row="9"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Średnie stężenie hemoglobiny w erytrocytach MCHC [g/dl]"
-                FontSize="25"
-                Foreground="White" />
+                <Label
+                    Grid.Row="4"
+                    VerticalAlignment="Center"
+                    Content="Średnia masa hemoglobiny w erytrocycie MCH [pg]"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.SredniaMasaHemoglobinyWErytrocycieMch, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Label
-                Grid.Row="10"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Rozpiętość rozkładu objętości erytrocytów RDW-CV [%]"
-                FontSize="25"
-                Foreground="White" />
+                <Label
+                    Grid.Row="5"
+                    VerticalAlignment="Center"
+                    Content="Średnie stężenie hemoglobiny w erytrocytach MCHC [g/dl]"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.SrednieStezenieHemoglobinyWErytrocytachMchc, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Label
-                Grid.Row="11"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Retikulocyty RC [%]"
-                FontSize="25"
-                Foreground="White" />
+                <Label
+                    Grid.Row="6"
+                    VerticalAlignment="Center"
+                    Content="Rozpiętość rozkładu objętości erytrocytów RDW-CV [%]"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.RozpietoscRozkladuObjetosciErytrocytowRdwCw, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Label
-                Grid.Row="12"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Stężenie leukocytów WBC [liczba/μl]"
-                FontSize="25"
-                Foreground="White" />
+                <Label
+                    Grid.Row="7"
+                    VerticalAlignment="Center"
+                    Content="Retikulocyty RC [%]"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.RetikulocytyRc, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Label
-                Grid.Row="13"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Neutrofile [liczba/μl]"
-                FontSize="25"
-                Foreground="White" />
+                <Label
+                    Grid.Row="8"
+                    VerticalAlignment="Center"
+                    Content="Stężenie leukocytów WBC [liczba/μl]"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="8"
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.StezenieLeukocytowWbc, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Label
-                Grid.Row="14"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Bazofile [liczba/μl]"
-                FontSize="25"
-                Foreground="White" />
+                <Label
+                    Grid.Row="9"
+                    VerticalAlignment="Center"
+                    Content="Neutrofile [liczba/μl]"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="9"
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.Neutrofile, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Label
-                Grid.Row="15"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Eozynofile [liczba/μl]"
-                FontSize="25"
-                Foreground="White" />
+                <Label
+                    Grid.Row="10"
+                    VerticalAlignment="Center"
+                    Content="Bazofile [liczba/μl]"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="10"
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.Bazofile, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Label
-                Grid.Row="16"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Limfocyty [liczba/μl]"
-                FontSize="25"
-                Foreground="White" />
+                <Label
+                    Grid.Row="11"
+                    VerticalAlignment="Center"
+                    Content="Eozynofile [liczba/μl]"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="11"
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.Eozynofile, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Label
-                Grid.Row="17"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Monocyty [liczba/μl]"
-                FontSize="25"
-                Foreground="White" />
+                <Label
+                    Grid.Row="12"
+                    VerticalAlignment="Center"
+                    Content="Limfocyty [liczba/μl]"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="12"
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.Limfocyty, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Label
-                Grid.Row="18"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Płytki krwi PLT [liczba/μl]"
-                FontSize="25"
-                Foreground="White" />
+                <Label
+                    Grid.Row="13"
+                    VerticalAlignment="Center"
+                    Content="Monocyty [liczba/μl]"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="13"
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.Monocyty, UpdateSourceTrigger=PropertyChanged}" />
 
-            <Label
-                Grid.Row="19"
-                Grid.Column="0"
-                Margin="20,10,0,10"
-                VerticalAlignment="Center"
-                Content="Średnia objętość krwi MPV [fl]"
-                FontSize="25"
-                Foreground="White" />
+                <Label
+                    Grid.Row="14"
+                    VerticalAlignment="Center"
+                    Content="Płytki krwi PLT [liczba/μl]"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="14"
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.PlytkiKrwiPlt, UpdateSourceTrigger=PropertyChanged}" />
 
-            <DatePicker
-                Grid.Row="1"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                SelectedDate="{Binding NoweBadanie.DataBadania, UpdateSourceTrigger=PropertyChanged}" />
+                <Label
+                    Grid.Row="15"
+                    VerticalAlignment="Center"
+                    Content="Średnia objętość krwi MPV [fl]"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="15"
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.SredniaObjetoscKrwiMpv, UpdateSourceTrigger=PropertyChanged}" />
 
-            <TextBox
-                Grid.Row="2"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                Text="{Binding NoweBadanie.NazwaKliniki, UpdateSourceTrigger=PropertyChanged}" />
+                <Label
+                    Grid.Row="16"
+                    VerticalAlignment="Center"
+                    Content="Żelazo"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="16"
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.Zelazo, UpdateSourceTrigger=PropertyChanged}" />
 
-            <TextBox
-                Grid.Row="4"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                Text="{Binding NoweBadanie.StezenieErytrocytowRbc, UpdateSourceTrigger=PropertyChanged}" />
+                <Label
+                    Grid.Row="17"
+                    VerticalAlignment="Center"
+                    Content="Magnez"
+                    FontSize="15"
+                    Foreground="White" />
+                <TextBox
+                    Grid.Row="17"
+                    Grid.Column="1"
+                    Margin="3"
+                    FontSize="15"
+                    Text="{Binding NoweBadanie.Magnez, UpdateSourceTrigger=PropertyChanged}" />
+            </Grid>
+        </ScrollViewer>
 
-            <TextBox
-                Grid.Row="5"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                Text="{Binding NoweBadanie.HemoglobinaHb, UpdateSourceTrigger=PropertyChanged}" />
-
-            <TextBox
-                Grid.Row="6"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                Text="{Binding NoweBadanie.HematokrytHtc, UpdateSourceTrigger=PropertyChanged}" />
-
-            <TextBox
-                Grid.Row="7"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                Text="{Binding NoweBadanie.SredniaObjetoscErytrocytuMcv, UpdateSourceTrigger=PropertyChanged}" />
-
-            <TextBox
-                Grid.Row="8"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                Text="{Binding NoweBadanie.SredniaMasaHemoglobinyWErytrocycieMch, UpdateSourceTrigger=PropertyChanged}" />
-
-            <TextBox
-                Grid.Row="9"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                Text="{Binding NoweBadanie.SrednieStezenieHemoglobinyWErytrocytachMchc, UpdateSourceTrigger=PropertyChanged}" />
-
-            <TextBox
-                Grid.Row="10"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                Text="{Binding NoweBadanie.RozpietoscRozkladuObjetosciErytrocytowRdwCw, UpdateSourceTrigger=PropertyChanged}" />
-
-            <TextBox
-                Grid.Row="11"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                Text="{Binding NoweBadanie.RetikulocytyRc, UpdateSourceTrigger=PropertyChanged}" />
-
-            <TextBox
-                Grid.Row="12"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                Text="{Binding NoweBadanie.StezenieLeukocytowWbc, UpdateSourceTrigger=PropertyChanged}" />
-
-            <TextBox
-                Grid.Row="13"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                Text="{Binding NoweBadanie.Neutrofile, UpdateSourceTrigger=PropertyChanged}" />
-
-            <TextBox
-                Grid.Row="14"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                Text="{Binding NoweBadanie.Bazofile, UpdateSourceTrigger=PropertyChanged}" />
-
-            <TextBox
-                Grid.Row="15"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                Text="{Binding NoweBadanie.Eozynofile, UpdateSourceTrigger=PropertyChanged}" />
-
-            <TextBox
-                Grid.Row="16"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                Text="{Binding NoweBadanie.Limfocyty, UpdateSourceTrigger=PropertyChanged}" />
-
-            <TextBox
-                Grid.Row="17"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                Text="{Binding NoweBadanie.Monocyty, UpdateSourceTrigger=PropertyChanged}" />
-
-            <TextBox
-                Grid.Row="18"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                Text="{Binding NoweBadanie.PlytkiKrwiPlt, UpdateSourceTrigger=PropertyChanged}" />
-
-            <TextBox
-                Grid.Row="19"
-                Grid.Column="1"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                FontSize="25"
-                Foreground="Black"
-                Text="{Binding NoweBadanie.SredniaObjetoscKrwiMpv, UpdateSourceTrigger=PropertyChanged}" />
-
+        <StackPanel
+            Grid.Row="6"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
             <Button
-                Grid.Row="20"
-                Grid.Column="0"
-                Grid.ColumnSpan="2"
-                Margin="5,10,5,10"
-                Background="LightSkyBlue"
-                Command="{Binding WrocCommand}"
-                CommandParameter="{Binding ElementName=noweBadanie}"
-                Content="Wróć"
-                FontSize="30" />
-
-            <Button
-                Grid.Row="21"
-                Grid.Column="0"
-                Grid.ColumnSpan="2"
-                Margin="5,10,5,10"
                 Background="LightSkyBlue"
                 Command="{Binding ZapiszCommand}"
                 CommandParameter="{Binding ElementName=noweBadanie}"
                 Content="Zapisz"
-                FontSize="30" />
-
-        </Grid>
-    </ScrollViewer>
-
+                FontSize="15" />
+            <Button
+                Background="LightSkyBlue"
+                Command="{Binding WrocCommand}"
+                CommandParameter="{Binding ElementName=noweBadanie}"
+                Content="Wróć"
+                FontSize="15" />
+        </StackPanel>
+    </Grid>
 </Window>
