@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BadanieKrwi.Data_Base;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,13 @@ namespace BadanieKrwi
     /// </summary>
     public partial class App : Application
     {
+        public static AppDbContext Baza { get; set; }
+
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            Baza = new AppDbContext();
+        }
     }
 }
