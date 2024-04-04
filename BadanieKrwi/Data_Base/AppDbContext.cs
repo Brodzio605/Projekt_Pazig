@@ -26,8 +26,7 @@ namespace BadanieKrwi.Data_Base
 
         // uzycie SQL serwera i connectionString, który jest odczytywany z App.config
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            
+        {            
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseSqlServer(_connString);
         }
