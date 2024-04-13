@@ -1,4 +1,5 @@
-﻿using BadanieKrwi.Models;
+﻿using BadanieKrwi.Data_Base;
+using BadanieKrwi.Models;
 using BadanieKrwi.Views;
 using System;
 using System.Collections.Generic;
@@ -190,8 +191,26 @@ namespace BadanieKrwi.ViewModels
         {
             if (obj is RejestracjaOkno r)
             {
+                Uzytkownik nowyUzytkownik = new Uzytkownik
+                {
+                    Imie = Imie,
+                    Nazwisko = Nazwisko,
+                    Email = Email,
+                    HasloHash = Haslo.GetHashCode().ToString(), // Hashujemy hasło
+                    Wiek = Wiek,
+                    Plec = Plec,
+                    DataRejestracji = DateTime.Now
+                };
+
+
+                App.Baza.Uzytkownik.Add(nowyUzytkownik); // Dodajemy nowego użytkownika do kontekstu
+                App.Baza.SaveChanges(); // Zapisujemy zmiany w bazie danych
+                    
+
                 MessageBox.Show("Twoje dane zostały zapisane", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
                 r.Close();
+               
+               
             }
         }
         #endregion Methods

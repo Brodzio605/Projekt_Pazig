@@ -1,6 +1,8 @@
 ﻿using BadanieKrwi.Models;
 using BadanieKrwi.Views;
 using System;
+using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Windows;
 using System.Windows.Input;
 
@@ -91,9 +93,20 @@ namespace BadanieKrwi.ViewModels
         {
             //if (_email == "a@gmail.com" && _haslo == "haslo")
             //{
+            var user = App.Baza.Uzytkownik.FirstOrDefault(u => u.Email == _email); // Sprawdzamy czy istnieje użytkownik o podanym emailu
+
+            if (user != null && user.HasloHash == _haslo.GetHashCode().ToString()) // Sprawdzamy czy hasło jest poprawne
+            {
                 MenuOkno menuWindow = new MenuOkno();
                 menuWindow.Show();
                 mw.Close();
+            }
+            else
+            {
+                MessageBox.Show("Nieprawidłowy adres email lub hasło.", "Błąd logowania", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+               
             //}
             //else if (_email == "a@gmail.com")
             //{

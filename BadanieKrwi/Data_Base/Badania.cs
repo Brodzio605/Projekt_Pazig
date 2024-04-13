@@ -11,7 +11,7 @@ namespace BadanieKrwi.Data_Base
     public class Badania
     {
         public int Id { get; set; }
-       
+        public int IdKliniki { get; set; }
         public int IdUzytkownika { get; set; }
 
         public DateTime DataBadania { get; set; }
