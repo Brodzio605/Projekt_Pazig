@@ -16,7 +16,7 @@ namespace BadanieKrwi.Models
             _sender = new EmailSender(ConfigurationManager.AppSettings["EmailSmtp"],
                 Convert.ToInt32(ConfigurationManager.AppSettings["EmailPort"]),
                 ConfigurationManager.AppSettings["EmailSender"],
-                ConfigurationManager.AppSettings["EmailSenderPassword"]);// "smtp.gmail.com", 587, "alakwiatkowska648@gmail.com", "lwsw gcev ewpo oynn");
+                ConfigurationManager.AppSettings["EmailSenderPassword"]);
         }
 
         public void WyslijPowiadomienieOBadaniu(DateTime dataBadania)
