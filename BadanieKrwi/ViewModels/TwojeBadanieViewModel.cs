@@ -1,8 +1,9 @@
 ﻿using BadanieKrwi.Models;
 using BadanieKrwi.Views;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows;
 using System.Windows.Input;
 
 namespace BadanieKrwi.ViewModels
@@ -60,6 +61,27 @@ namespace BadanieKrwi.ViewModels
         {
             InicjalizacjaBadan();
             InicjalizacjaKomend();
+            SprawdzTerminKolejnegoBadania();
+        }
+
+        private void SprawdzTerminKolejnegoBadania()
+        {
+            if (Badania == null || Badania.Count == 0)
+                return;
+
+            var obecnaData = DateTime.Now;
+            var badanieZJutra = Badania.FirstOrDefault(x => x.DataBadania.Day == obecnaData.Day + 1 && x.DataBadania.Month == obecnaData.Month && x.DataBadania.Year == obecnaData.Year);
+            if (badanieZJutra != null)
+            {
+                try
+                {
+                    MenadzerPowiadomien.Instance.WyslijPowiadomienieOBadaniu(badanieZJutra.DataBadania);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Błąd podczas wysyłania powiadomienia:\n{ex.Message}");
+                }
+            }
         }
 
         private void InicjalizacjaBadan()

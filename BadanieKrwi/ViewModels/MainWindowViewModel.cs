@@ -97,6 +97,7 @@ namespace BadanieKrwi.ViewModels
 
             if (user != null && user.HasloHash == _haslo.GetHashCode().ToString()) // Sprawdzamy czy hasło jest poprawne
             {
+                Globals.ZalogowanyUzytkownik = user;
                 MenuOkno menuWindow = new MenuOkno();
                 menuWindow.Show();
                 mw.Close();

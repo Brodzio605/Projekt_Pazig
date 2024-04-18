@@ -4,7 +4,6 @@ using BadanieKrwi.Views;
 using System;
 using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace BadanieKrwi.ViewModels
@@ -205,7 +204,7 @@ namespace BadanieKrwi.ViewModels
 
                 App.Baza.Uzytkownik.Add(nowyUzytkownik); // Dodajemy nowego użytkownika do kontekstu
                 App.Baza.SaveChanges(); // Zapisujemy zmiany w bazie danych
-                    
+
 
                 MessageBox.Show("Twoje dane zostały zapisane", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
                 r.Close();

@@ -1,7 +1,6 @@
 ﻿using BadanieKrwi.Models;
 using BadanieKrwi.Views;
 using System;
-using System.Globalization;
 using System.Windows;
 using System.Windows.Input;
 

@@ -9,7 +9,7 @@
     x:Name="rejestracja"
     Title="Rejestracja"
     Width="600"
-    Height="1200"
+    Height="750"
     Background="Black"
     FontSize="15"
     ResizeMode="NoResize"
@@ -19,66 +19,66 @@
         <vm:RejestracjaViewModel />
     </Window.DataContext>
     <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <StackPanel Margin="50">
+        <StackPanel Margin="5">
             <Label
                 HorizontalAlignment="Center"
                 Content="Rejestracja"
-                FontSize="50"
+                FontSize="30"
                 FontWeight="Bold"
                 Foreground="White" />
             <Separator FontWeight="Bold" Foreground="White" />
             <Label
                 Margin="0,20,0,0"
                 Content="Email"
-                FontSize="25"
+                FontSize="15"
                 Foreground="White" />
             <TextBox
                 Margin="5,0,5,0"
                 Background="LightSkyBlue"
-                FontSize="25"
+                FontSize="15"
                 Foreground="Black"
                 Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}" />
 
             <Label
                 Margin="0,20,0,0"
                 Content="Imię"
-                FontSize="25"
+                FontSize="15"
                 Foreground="White" />
             <TextBox
                 Margin="5,0,5,0"
                 Background="LightSkyBlue"
-                FontSize="25"
+                FontSize="15"
                 Foreground="Black"
                 Text="{Binding Imie}" />
 
             <Label
                 Margin="0,20,0,0"
                 Content="Nazwisko"
-                FontSize="25"
+                FontSize="15"
                 Foreground="White" />
             <TextBox
                 Margin="5,0,5,0"
                 Background="LightSkyBlue"
-                FontSize="25"
+                FontSize="15"
                 Foreground="Black"
                 Text="{Binding Nazwisko}" />
 
             <Label
                 Margin="0,20,0,0"
                 Content="Wiek"
-                FontSize="25"
+                FontSize="15"
                 Foreground="White" />
             <TextBox
                 Margin="5,0,5,0"
                 Background="LightSkyBlue"
-                FontSize="25"
+                FontSize="15"
                 Foreground="Black"
                 Text="{Binding Wiek}" />
 
             <Label
                 Margin="0,20,0,0"
                 Content="Płeć"
-                FontSize="25"
+                FontSize="15"
                 Foreground="White" />
             <ComboBox
                 Background="LightSkyBlue"
@@ -88,37 +88,37 @@
             <Label
                 Margin="0,20,0,0"
                 Content="Hasło"
-                FontSize="25"
+                FontSize="15"
                 Foreground="White" />
 
             <PasswordBox
                 Margin="5,0,5,0"
                 Background="LightSkyBlue"
-                FontSize="25"
+                FontSize="15"
                 Foreground="Black"
                 PasswordChanged="inputHaslo_PasswordChanged" />
 
             <Label
                 Margin="0,20,0,0"
                 Content="Powtórz Hasło"
-                FontSize="25"
+                FontSize="15"
                 Foreground="White" />
             <PasswordBox
                 Margin="5,0,5,0"
                 Background="LightSkyBlue"
-                FontSize="25"
+                FontSize="15"
                 Foreground="Black"
                 PasswordChanged="inputPowHaslo_PasswordChanged" />
 
             <Button
-                Margin="0,60,0,0"
+                Margin="0,30,0,0"
                 Padding="10"
                 HorizontalAlignment="Center"
                 Background="LightSkyBlue"
                 Command="{Binding RejstracjstracjaWidokCommand}"
                 CommandParameter="{Binding ElementName=rejestracja}"
                 Content="Zarejestruj się"
-                FontSize="25" />
+                FontSize="15" />
         </StackPanel>
     </ScrollViewer>
 </Window>

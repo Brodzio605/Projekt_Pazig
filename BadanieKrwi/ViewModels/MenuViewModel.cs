@@ -96,9 +96,8 @@ namespace BadanieKrwi.ViewModels
         private void ExecInformacjeWidok(object obj)
         {
             if (obj is MenuOkno m)
-            {
-                
-                m.Close();
+            {                
+                //m.Close();
             }
         }
         #endregion Methods
