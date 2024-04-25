@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using System.Linq;
 
 namespace BadanieKrwi.ViewModels
 {
@@ -50,6 +51,7 @@ namespace BadanieKrwi.ViewModels
         public TwojeBadanieViewModel()
         {
             Inicjalizacja();
+            WczytajBadania();
         }
         #endregion Constructors
 
@@ -166,6 +168,11 @@ namespace BadanieKrwi.ViewModels
                 Badania[Badania.IndexOf(WybraneBadanie)] = (bo.DataContext as BadanieViewModel).WybraneBadanie;
             }
             WybraneBadanie = null;
+        }
+        private void WczytajBadania()
+        {
+            // inicjalizacja kolekcji, w parametrze przekazujemy cala liste, zaczytujemy wszytskuch pacjentów
+            Badania = new ObservableCollection<BadanieModel>(App.Baza.Badania.ToList());
         }
         #endregion Methods
 

@@ -2,7 +2,9 @@
 using BadanieKrwi.Views;
 using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows.Input;
+
 
 namespace BadanieKrwi.ViewModels
 {
@@ -69,6 +71,7 @@ namespace BadanieKrwi.ViewModels
         public KlinikiViewModel()
         {
             Inicjalizacja();
+            WczytajKliniki();
         }
         #endregion Constructors
 
@@ -109,6 +112,11 @@ namespace BadanieKrwi.ViewModels
         private void ExecNowy(object obj)
         {
             NowaKlinika = new Klinika() { Id = Guid.NewGuid() };
+        }
+        private void WczytajKliniki()
+        {
+            // inicjalizacja kolekcji, w parametrze przekazujemy cala liste, zaczytujemy wszytskuch pacjentów
+            Kliniki = new ObservableCollection<Klinika>(App.Baza.Kliniki.ToList());
         }
         #endregion Methods 
     }

@@ -183,8 +183,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Data_Base\AppDbContext.cs" />
-    <Compile Include="Data_Base\Badania.cs" />
-    <Compile Include="Data_Base\Kliniki.cs" />
     <Compile Include="Data_Base\Uzytkownik.cs" />
     <Compile Include="Models\BadanieModel.cs" />
     <Compile Include="Models\ButtonModel.cs" />

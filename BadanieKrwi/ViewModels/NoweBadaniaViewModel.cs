@@ -1,9 +1,13 @@
-﻿using BadanieKrwi.Models;
+﻿using BadanieKrwi.Data_Base;
+using BadanieKrwi.Models;
 using BadanieKrwi.Views;
 using System;
 using System.Globalization;
+using System.Security.Policy;
 using System.Windows;
 using System.Windows.Input;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Linq;
 
 namespace BadanieKrwi.ViewModels
 {
@@ -128,6 +132,21 @@ namespace BadanieKrwi.ViewModels
             {
                 if (NoweBadanie.CzyZmodyfikowano)
                 {
+                    App.Baza.Badania.Add(NoweBadanie); // Dodajemy nowego użytkownika do kontekstu
+                    App.Baza.SaveChanges(); // Zapisujemy zmiany w bazie danych
+                    
+                        // Sprawdź, czy klinika o podanej nazwie istnieje w bazie
+                        if (!App.Baza.Kliniki.Any(k => k.Nazwa == NoweBadanie.NazwaKliniki))
+                        {
+                            // Jeśli klinika nie istnieje, utwórz nową
+                            Klinika nowaKlinika = new Klinika { Nazwa = NoweBadanie.NazwaKliniki };
+                            // Dodaj nową klinikę do bazy danych
+                            App.Baza.Kliniki.Add(nowaKlinika);
+                            // Zapisz zmiany w bazie danych
+                            App.Baza.SaveChanges();
+                        }
+                    
+
                     MessageBoxResult result = MessageBox.Show("Twoje dane zostały zapisane", "Powrót", MessageBoxButton.OK, MessageBoxImage.Information);
                     if (result == MessageBoxResult.OK)
                         nbo.DialogResult = true;

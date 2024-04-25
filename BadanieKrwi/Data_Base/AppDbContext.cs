@@ -16,8 +16,8 @@ namespace BadanieKrwi.Data_Base
                                             .ConnectionStrings["ConnectionString"].ConnectionString;
     
         public DbSet<Uzytkownik> Uzytkownik { get; set; }
-        public DbSet<Badania> Badania { get; set; }
-        public DbSet<Kliniki> Kliniki { get; set; }
+        public DbSet<Models.BadanieModel> Badania { get; set; }
+        public DbSet<Models.Klinika> Kliniki { get; set; }
 
         public AppDbContext()
         {
