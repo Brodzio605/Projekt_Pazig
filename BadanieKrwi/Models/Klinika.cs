@@ -82,5 +82,15 @@ namespace BadanieKrwi.Models
             Telefon = klinika.Telefon;
             Informacja = klinika.Informacja;
         }
+        public void AktualizujKlinike (Klinika klinika) 
+        {
+            if (klinika == null)
+                return;
+            Nazwa = klinika.Nazwa;
+            Id = klinika.Id;
+            Adres = klinika.Adres;
+            Telefon = klinika.Telefon;
+            Informacja = klinika.Informacja;
+        }
     }
 }

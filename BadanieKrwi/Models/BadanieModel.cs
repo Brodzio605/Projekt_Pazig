@@ -373,6 +373,33 @@ namespace BadanieKrwi.Models
             Zelazo = badanie.Zelazo;
             Magnez = badanie.Magnez;
         }
+        public void AktualizujBadanie(BadanieModel badanie)
+        {
+            if (badanie == null)
+                return;
+
+            Id = badanie.Id;
+            NazwaBadania = badanie.NazwaBadania;
+            DataBadania = badanie.DataBadania;
+            NazwaKliniki = badanie.NazwaKliniki;
+            StezenieErytrocytowRbc = badanie.StezenieErytrocytowRbc;
+            HemoglobinaHb = badanie.HemoglobinaHb;
+            HematokrytHtc = badanie.HematokrytHtc;
+            SredniaObjetoscErytrocytuMcv = badanie.SredniaObjetoscErytrocytuMcv;
+            SrednieStezenieHemoglobinyWErytrocytachMchc = badanie.SrednieStezenieHemoglobinyWErytrocytachMchc;
+            RozpietoscRozkladuObjetosciErytrocytowRdwCw = badanie.RozpietoscRozkladuObjetosciErytrocytowRdwCw;
+            RetikulocytyRc = badanie.RetikulocytyRc;
+            StezenieLeukocytowWbc = badanie.StezenieLeukocytowWbc;
+            Neutrofile = badanie.Neutrofile;
+            Bazofile = badanie.Bazofile;
+            Eozynofile = badanie.Eozynofile;
+            Limfocyty = badanie.Limfocyty;
+            Monocyty = badanie.Monocyty;
+            PlytkiKrwiPlt = badanie.PlytkiKrwiPlt;
+            SredniaObjetoscKrwiMpv = badanie.SredniaObjetoscKrwiMpv;
+            Zelazo = badanie.Zelazo;
+            Magnez = badanie.Magnez;
+        }
         #endregion Constructors
     }
 }

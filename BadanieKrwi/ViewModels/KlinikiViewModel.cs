@@ -2,6 +2,7 @@
 using BadanieKrwi.Views;
 using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Windows.Input;
 
@@ -10,6 +11,7 @@ namespace BadanieKrwi.ViewModels
 {
     public class KlinikiViewModel : KlasaBazowa
     {
+        
         #region Properties
         private ObservableCollection<Klinika> _kliniki;
         public ObservableCollection<Klinika> Kliniki
@@ -79,13 +81,12 @@ namespace BadanieKrwi.ViewModels
         #region Main
         private void Inicjalizacja()
         {
-            Kliniki = new ObservableCollection<Klinika>()
-            {
-                 new Klinika(){ Id = Guid.NewGuid(), Nazwa = "Klinika 1", Adres = "Adres 1", Informacja = "Info 1", Telefon = "123 456 788" },
-                 new Klinika(){ Id = Guid.NewGuid(), Nazwa = "Klinika 2", Adres = "Adres 2", Informacja = "Info 2", Telefon = "123 456 789" },
-            };
+            //Kliniki = new ObservableCollection<Klinika>()
+            //{
+                 
+            //};
 
-            WybranaKlinika = Kliniki[0];
+            //WybranaKlinika = Kliniki[0];
             InicjalizacjaKomend();
         }
 
@@ -94,6 +95,24 @@ namespace BadanieKrwi.ViewModels
             WrocCommand = new RelayCommand(ExecWroc);
             ZapiszCommand = new RelayCommand(ExecZapisz, x => czyMoznaZapisac);
             NowyCommand = new RelayCommand(ExecNowy);
+        }
+
+        private bool Aktualizuj()
+        {
+            if (WybranaKlinika != null)
+            {
+                
+                WybranaKlinika.AktualizujKlinike(NowaKlinika);
+                App.Baza.Update(WybranaKlinika);
+                return App.Baza.SaveChanges() > 0;
+            }
+            else if (WybranaKlinika==null)
+            {
+                App.Baza.Add(NowaKlinika);
+                return App.Baza.SaveChanges() > 0;
+            }
+            return false;
+            
         }
 
         #endregion Main
@@ -105,12 +124,13 @@ namespace BadanieKrwi.ViewModels
 
         private void ExecZapisz(object obj)
         {
-            if (obj is KlinikiOkno ko)
+            if (obj is KlinikiOkno ko && Aktualizuj())
                 ko.Close();
         }
 
         private void ExecNowy(object obj)
         {
+            WybranaKlinika = null;
             NowaKlinika = new Klinika() { Id = Guid.NewGuid() };
         }
         private void WczytajKliniki()

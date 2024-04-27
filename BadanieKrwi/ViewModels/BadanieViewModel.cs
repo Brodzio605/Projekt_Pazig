@@ -2,6 +2,7 @@
 using BadanieKrwi.Views;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Input;
 
 namespace BadanieKrwi.ViewModels
@@ -129,6 +130,17 @@ namespace BadanieKrwi.ViewModels
             WrocCommand = new RelayCommand(ExecWrocCommand);
         }
 
+        private bool Aktualizuj()
+        {        
+            if (WybraneBadanie != null)
+            {
+                OryginalneBadanie.AktualizujBadanie(WybraneBadanie);
+                App.Baza.Update(OryginalneBadanie);
+                return App.Baza.SaveChanges() > 0;
+            }    
+            return false;
+        }
+
         private void AktualizacjaNaglowkaIPrzyciskuZapisuEdycji()
         {
             Naglowek = _czyEdytowac
@@ -150,7 +162,7 @@ namespace BadanieKrwi.ViewModels
 
         private void ExecZapiszZmiany(object obj)
         {
-            if (obj is BadanieOkno bo)
+            if (obj is BadanieOkno bo && Aktualizuj())
                 bo.DialogResult = true;
         }
 
