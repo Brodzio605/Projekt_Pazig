@@ -53,32 +53,32 @@ namespace BadanieKrwi.ViewModels
             && _czyMagnez
             ;
 
-        private bool _czyStezenieErytrocytowJestOk => NoweBadanie.StezenieErytrocytowRbc > 0;
-        private bool _czyHemoglobina => NoweBadanie.HemoglobinaHb > 0;
-        private bool _czyHematokryt => NoweBadanie.HematokrytHtc > 0;
-        private bool _czySredniaObjErytrocytow => NoweBadanie.SredniaObjetoscErytrocytuMcv > 0;
-        private bool _czySredniaMasaHemoglobiny => NoweBadanie.SredniaMasaHemoglobinyWErytrocycieMch > 0;
-        private bool _czySrednieStezenieHemoglobiny => NoweBadanie.SrednieStezenieHemoglobinyWErytrocytachMchc > 0;
+        private bool _czyStezenieErytrocytowJestOk => NoweBadanie.StezenieErytrocytowRbc >= 0 ;
+        private bool _czyHemoglobina => NoweBadanie.HemoglobinaHb >= 0;
+        private bool _czyHematokryt => NoweBadanie.HematokrytHtc >= 0;
+        private bool _czySredniaObjErytrocytow => NoweBadanie.SredniaObjetoscErytrocytuMcv >= 0;
+        private bool _czySredniaMasaHemoglobiny => NoweBadanie.SredniaMasaHemoglobinyWErytrocycieMch >= 0;
+        private bool _czySrednieStezenieHemoglobiny => NoweBadanie.SrednieStezenieHemoglobinyWErytrocytachMchc >= 0;
 
-        private bool _czyRozpietoscRozkladu_Obj_Erytrocytow => NoweBadanie.RozpietoscRozkladuObjetosciErytrocytowRdwCw > 0;
+        private bool _czyRozpietoscRozkladu_Obj_Erytrocytow => NoweBadanie.RozpietoscRozkladuObjetosciErytrocytowRdwCw >= 0;
 
-        private bool _czyRetikulocyty => NoweBadanie.RetikulocytyRc > 0;
-        private bool _czyStezenieLeukocytow => NoweBadanie.StezenieLeukocytowWbc > 0;
+        private bool _czyRetikulocyty => NoweBadanie.RetikulocytyRc >= 0;
+        private bool _czyStezenieLeukocytow => NoweBadanie.StezenieLeukocytowWbc >= 0;
 
-        private bool _czyNeutrofile => NoweBadanie.Neutrofile > 0;
+        private bool _czyNeutrofile => NoweBadanie.Neutrofile >= 0;
 
-        private bool _czyBazofile => NoweBadanie.Bazofile > 0;
+        private bool _czyBazofile => NoweBadanie.Bazofile >= 0;
 
-        private bool _czyEozynofile => NoweBadanie.Eozynofile > 0;
+        private bool _czyEozynofile => NoweBadanie.Eozynofile >= 0;
 
-        private bool _czyLimfocyty => NoweBadanie.Limfocyty > 0;
-        private bool _czyMonocyty => NoweBadanie.Monocyty > 0;
+        private bool _czyLimfocyty => NoweBadanie.Limfocyty >= 0;
+        private bool _czyMonocyty => NoweBadanie.Monocyty >= 0;
 
-        private bool _czyPlytkiKrwi => NoweBadanie.PlytkiKrwiPlt > 0;
+        private bool _czyPlytkiKrwi => NoweBadanie.PlytkiKrwiPlt >= 0;
 
-        private bool _czySredniaObj => NoweBadanie.SredniaObjetoscKrwiMpv > 0;
-        private bool _czyZelazo => NoweBadanie.Zelazo > 0;
-        private bool _czyMagnez => NoweBadanie.Magnez > 0;
+        private bool _czySredniaObj => NoweBadanie.SredniaObjetoscKrwiMpv >= 0;
+        private bool _czyZelazo => NoweBadanie.Zelazo >= 0;
+        private bool _czyMagnez => NoweBadanie.Magnez >= 0;
         #endregion Properties
 
         #region Commands

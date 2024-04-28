@@ -109,7 +109,7 @@ namespace BadanieKrwi.ViewModels
             else if (WybranaKlinika==null)
             {
                 App.Baza.Add(NowaKlinika);
-                return App.Baza.SaveChanges() > 0;
+                return App.Baza.SaveChanges() > 0; 
             }
             return false;
             

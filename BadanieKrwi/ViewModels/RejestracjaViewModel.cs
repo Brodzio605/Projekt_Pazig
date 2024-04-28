@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Linq;
 
 namespace BadanieKrwi.ViewModels
 {
@@ -191,24 +192,33 @@ namespace BadanieKrwi.ViewModels
         {
             if (obj is RejestracjaOkno r)
             {
-                Uzytkownik nowyUzytkownik = new Uzytkownik
-                {
-                    Imie = Imie,
-                    Nazwisko = Nazwisko,
-                    Email = Email,
-                    HasloHash = Haslo.GetHashCode().ToString(), // Hashujemy hasło
-                    Wiek = Wiek,
-                    Plec = Plec,
-                    DataRejestracji = DateTime.Now
-                };
+                bool emailExists = App.Baza.Uzytkownik.Any(u => u.Email == Email);
+                if (!emailExists) 
+                { 
+                    Uzytkownik nowyUzytkownik = new Uzytkownik
+                    {
+                        Imie = Imie,
+                        Nazwisko = Nazwisko,
+                        Email = Email,
+                        HasloHash = Haslo.GetHashCode().ToString(), // Hashujemy hasło
+                        Wiek = Wiek,
+                        Plec = Plec,
+                        DataRejestracji = DateTime.Now
+                    };
 
 
-                App.Baza.Uzytkownik.Add(nowyUzytkownik); // Dodajemy nowego użytkownika do kontekstu
-                App.Baza.SaveChanges(); // Zapisujemy zmiany w bazie danych
+                    App.Baza.Uzytkownik.Add(nowyUzytkownik); // Dodajemy nowego użytkownika do kontekstu
+                    App.Baza.SaveChanges(); // Zapisujemy zmiany w bazie danych
                     
 
-                MessageBox.Show("Twoje dane zostały zapisane", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
-                r.Close();
+                    MessageBox.Show("Twoje dane zostały zapisane", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                    r.Close();
+                }  
+                else if (emailExists)
+                {
+                    MessageBox.Show("Konto z podanym emailem już istnieje", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+               
                
                
             }

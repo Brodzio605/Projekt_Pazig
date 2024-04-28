@@ -358,6 +358,7 @@ namespace BadanieKrwi.Models
             StezenieErytrocytowRbc = badanie.StezenieErytrocytowRbc;
             HemoglobinaHb = badanie.HemoglobinaHb;
             HematokrytHtc = badanie.HematokrytHtc;
+            SredniaMasaHemoglobinyWErytrocycieMch = badanie.SredniaMasaHemoglobinyWErytrocycieMch;
             SredniaObjetoscErytrocytuMcv = badanie.SredniaObjetoscErytrocytuMcv;
             SrednieStezenieHemoglobinyWErytrocytachMchc = badanie.SrednieStezenieHemoglobinyWErytrocytachMchc;
             RozpietoscRozkladuObjetosciErytrocytowRdwCw = badanie.RozpietoscRozkladuObjetosciErytrocytowRdwCw;
@@ -385,6 +386,7 @@ namespace BadanieKrwi.Models
             StezenieErytrocytowRbc = badanie.StezenieErytrocytowRbc;
             HemoglobinaHb = badanie.HemoglobinaHb;
             HematokrytHtc = badanie.HematokrytHtc;
+            SredniaMasaHemoglobinyWErytrocycieMch = badanie.SredniaMasaHemoglobinyWErytrocycieMch;
             SredniaObjetoscErytrocytuMcv = badanie.SredniaObjetoscErytrocytuMcv;
             SrednieStezenieHemoglobinyWErytrocytachMchc = badanie.SrednieStezenieHemoglobinyWErytrocytachMchc;
             RozpietoscRozkladuObjetosciErytrocytowRdwCw = badanie.RozpietoscRozkladuObjetosciErytrocytowRdwCw;
